@@ -7,15 +7,17 @@ import { Provider } from 'react-redux';
 import LogInSignUp from '../containers/LogInSignUp';
 import { Context as AuthContext} from '../context/AuthContext';
 import NavLink from '../components/NavLink';
+import { NavigationEvents } from 'react-navigation';
 
 
 const SignupScreen = ( {navigation} )=>{
 
-    const {state, signup} = useContext(AuthContext);
+    const {state, signup, clearErrorMessage } = useContext(AuthContext);
 
 return (
     <Provider store = {store}>
             <View style={styles.container}>
+                <NavigationEvents onWillBlur={clearErrorMessage} />
                 <LogInSignUp title="Sign Up" func={signup} />
                 {state.errorMassage ? <Text style={styles.errorMassage}>{state.errorMassage}</Text>: null}
                 <Spacer>
