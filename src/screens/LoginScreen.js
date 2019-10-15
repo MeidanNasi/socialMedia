@@ -1,37 +1,30 @@
-import React from 'react';
-import { View, StyleSheet, TouchableOpacity} from 'react-native';
-import { Text, Input, Button} from 'react-native-elements';
+import React, {useContext} from 'react';
+import { View, StyleSheet } from 'react-native';
+import { Text } from 'react-native-elements';
 import Spacer from '../components/Spacer';
 import store from '../store/';
 import { Provider } from 'react-redux';
 import LogInSignUp from '../containers/LogInSignUp';
+import { Context as AuthContext} from '../context/AuthContext';
+import NavLink from '../components/NavLink';
 
 
-const LoginScreen = ({ navigation })=>{
+const LoginScreen = ( { navigation } )=>{
+
+    const {state, login} = useContext(AuthContext);
+
 return (
 
     <Provider store = {store}>
-
             <View style={styles.container}>
-
-
-
-                <LogInSignUp title="Log In"/>
-
+                <LogInSignUp title="Log In" func={login}/>
+                {state.errorMassage ? <Text style={styles.errorMassage}>{state.errorMassage}</Text>: null}
                 <Spacer>
-
-                <TouchableOpacity 
-                    style={{paddingLeft: 30}} 
-                    onPress={ ()=> navigation.navigate('Signup')}>
-                    <Text h5 style={{color:'red'}}> Don't have an account? click here to sign up! </Text>
-                </TouchableOpacity>
-
+                <NavLink text={"Don't have an account? click here to sign up" } routeName={'Signup'}/>
                 </Spacer>
-
-
             </View>
-
     </Provider>
+
     );
 
 }
@@ -48,11 +41,16 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         marginBottom: 100,
-        justifyContent: 'center'
+        paddingTop: 100,
     },
     background:{
         flex:1
-    }
+    },
+    errorMassage:{
+        fontSize: 16,
+        color: 'red', 
+        paddingLeft: 40
+     }
 
 });
 export default LoginScreen;

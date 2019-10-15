@@ -7,8 +7,7 @@ import { Context as AuthContext} from '../context/AuthContext';
 import { signup, login, logout } from '../context/AuthContext';
 
 class LogInSignUp extends Component {
-
-
+    
     state = {
         email:'',
         password:''

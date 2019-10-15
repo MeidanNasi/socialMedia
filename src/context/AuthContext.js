@@ -1,10 +1,14 @@
 import createDataContext from './createDataContext';
 import Api from '../api/index';
+//import AsyncStorage from '@react-native-community/async-storage';
+import { navigate } from '../navigationRef';
 
 const authReducer = (state, action) =>{
     switch (action.type){
         case 'add_error':
             return { ...state, errorMassage: action.payload };
+        case 'signup':
+            return { errorMassage:'' , token: action.payload };
         default:
             return state;
     }
@@ -20,6 +24,10 @@ const signup = (dispatch) =>{
             }
             );
             console.log("response:"+response);
+            navigate('DashBoard');
+            // await AsyncStorage.setItem('token', response.data.token);
+            // dispatch({ type: 'signup', payload: response.data.token });
+            
         } catch(err){
             dispatch({ type: 'add_error', payload: 'Something went worng with signing up!'})
         }
@@ -44,5 +52,5 @@ const logout = (dispatch) =>{
 export const { Provider, Context} = createDataContext(
         authReducer,
         { signup, login, logout },
-        { isSignedIn : false, errorMassage: '' } 
+        { token : null, errorMassage: '' } 
     );

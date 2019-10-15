@@ -12,7 +12,10 @@ import FollowScreen from './src/screens/FollowScreen';
 import DashBoardScreen from './src/screens/DashBoardScreen';
 import LandingScreen from './src/screens/LandingScreen';
 import { Provider as AuthProvider } from './src/context/AuthContext';
+import { setNavigator } from './src/navigationRef';
  
+
+
 const switchNavigator = createSwitchNavigator({
   loginFlow: createStackNavigator({
     Landing: LandingScreen,
@@ -31,7 +34,7 @@ const App = createAppContainer(switchNavigator); // With the provider I rapped a
 export default ()=>{
   return (
     <AuthProvider>
-      <App/>
+      <App ref={(navigator)=>{ setNavigator(navigator) }} />
     </AuthProvider>
   );
 };
