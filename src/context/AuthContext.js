@@ -2,7 +2,7 @@ import createDataContext from './createDataContext';
 import Api from '../api/index';
 //import AsyncStorage from '@react-native-community/async-storage';
 import { navigate } from '../navigationRef';
-import AddPostScreen from '../screens/AddPostScreen';
+
 
 const authReducer = (state, action) =>{
     switch (action.type){
@@ -18,6 +18,13 @@ const authReducer = (state, action) =>{
             return state;
     }
 };
+
+
+
+const clearErrorMessage = dispatch => () =>{
+    dispatch({type:'clear_error_message'});
+};
+
 
 const signup = (dispatch) =>{
      return async ( { email, password } )=>{
@@ -39,9 +46,6 @@ const signup = (dispatch) =>{
     };
 };
 
-const clearErrorMessage = dispatch => () =>{
-    dispatch({type:'clear_error_message'});
-};
 
 const login = (dispatch) =>{
     return async ( { email, password } )=>{
@@ -64,6 +68,7 @@ const login = (dispatch) =>{
         }
     };
 };
+
 
 const logout = (dispatch) =>{
     return ()=>{

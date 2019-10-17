@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 import { Text, Input, Button} from 'react-native-elements';
 import Spacer from '../components/Spacer';
-import { useContext } from 'react';
-import { Context as AuthContext} from '../context/AuthContext';
-import { signup, login, logout } from '../context/AuthContext';
 
 class LogInSignUp extends Component {
     
