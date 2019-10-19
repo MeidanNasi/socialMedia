@@ -37,8 +37,8 @@ return (
         />
 
             </Spacer>
-{/* 
-            <Button 
+
+        <Button 
             raised 
             large  
             title="dash" 
@@ -47,7 +47,7 @@ return (
                           textShadowRadius:5}}
             buttonStyle={{ height: 50, width: 230, backgroundColor: '#A2A2D0' , borderRadius: 5 }}
             onPress={ ()=>{ console.log('Dash'); navigation.navigate('DashBoard'); }} 
-        /> */}
+        />
 
         </View>
 

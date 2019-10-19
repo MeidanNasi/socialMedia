@@ -1,20 +1,25 @@
 import React from 'react';
-import { View, StyleSheet, Text} from 'react-native';
+import { View, StyleSheet, Image, FlatList} from 'react-native';
 
 
-const AccountScreen = ()=>{
-return (
-
-    <View>
-
-        <Text style={{fontSize: 48 }}>AccountScreen</Text>
+class AccountScreen extends React.Component{
 
 
-    </View>
 
-    );
+        uri = this.props.navigation.state.params.uri
+        
 
+
+    render(){
+        
+        const uri = this.uri;
+
+        return(
+        <View>
+        { uri ? <Image source={{uri}} style={{width:300, height:300}}/> : null }
+        </View>
+        )
+    }
 }
-
 const styles = StyleSheet.create({});
 export default AccountScreen;

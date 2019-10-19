@@ -30,7 +30,7 @@ const signup = (dispatch) =>{
      return async ( { email, password } )=>{
         try{
             const response = await Api.post('/usr/register',
-             { 
+            { 
                  email: email, 
                  password: password 
             }

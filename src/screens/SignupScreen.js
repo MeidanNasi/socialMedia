@@ -23,6 +23,7 @@ return (
                 <Spacer>
                 <NavLink text={"Already have an account? click here to log in" } routeName={'Login'}/>
                 </Spacer> 
+                {console.log(state)}
             </View>
     </Provider>
     );
