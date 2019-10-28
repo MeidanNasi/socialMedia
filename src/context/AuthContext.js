@@ -35,7 +35,7 @@ const signup = (dispatch) =>{
                  password: password 
             }
             );
-            console.log("response:"+response);
+            console.log("response:"+JSON.stringify(response));
             navigate('DashBoard');
             // await AsyncStorage.setItem('token', response.data.token);
             // dispatch({ type: 'signup', payload: response.data.token });

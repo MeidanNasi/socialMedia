@@ -2,10 +2,11 @@ import React, {useContext} from 'react';
 import { StyleSheet } from 'react-native';
 import AddPhoto from '../containers/AddPhoto';
 
+
 const AddPostScreen = ()=>{
 
     return(
-                <AddPhoto/>
+            <AddPhoto/>
         );
 }
 

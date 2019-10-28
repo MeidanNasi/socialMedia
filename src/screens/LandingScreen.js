@@ -7,7 +7,7 @@ import Spacer from '../components/Spacer';
 const LandingScreen = ({navigation})=>{
 return (
     <ImageBackground source={require('../images/backgroundlanding.jpg')} style={styles.container}>
-        <View style={{paddingTop:400}}>
+        <View style={{paddingTop:350}}>
 
             <Spacer>
 
@@ -24,6 +24,7 @@ return (
 
             </Spacer>
 
+
             <Spacer>
       <Button 
             raised 
@@ -38,16 +39,20 @@ return (
 
             </Spacer>
 
+            <Spacer>
+
         <Button 
-            raised 
-            large  
-            title="dash" 
+            raised   
+            title="DashBoard" 
             titleStyle={{ textShadowColor:'#585858',
                           textShadowOffset:{width: 2, height: 2},
                           textShadowRadius:5}}
-            buttonStyle={{ height: 50, width: 230, backgroundColor: '#A2A2D0' , borderRadius: 5 }}
+            buttonStyle={{ height: 50, width: 230, backgroundColor: '#95B4CC' , borderRadius: 5 }}
             onPress={ ()=>{ console.log('Dash'); navigation.navigate('DashBoard'); }} 
         />
+
+
+</Spacer>
 
         </View>
 
