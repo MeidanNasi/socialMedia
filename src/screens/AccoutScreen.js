@@ -43,7 +43,7 @@ handleChoosePhoto = ()=>{
 render()
 {
     
-    const uri = this.props.navigation.state.params.image_url;
+    let uri = this.props.navigation.state.params.image_url;
     const title = this.props.navigation.state.params.title;
     const modalVisible = this.state.isVisible;
     const profilepic = this.state.profilepic
@@ -86,7 +86,6 @@ render()
 
             <View style={{ alignItems:'center' }}>
             <FlatList
-                //style={{borderColor:'black', borderWidth:2, paddingLeft:5, paddingTop:5, paddingRight:5, paddingVertical:5}}
                 data={this.state.images}
                 renderItem={({ item }) => (
                     <View style={{borderColor:'gray', borderWidth:1, paddingLeft:5, paddingTop:5, paddingRight:5, paddingVertical:5}}>
