@@ -10,35 +10,6 @@ return (
     <ScrollView>
 
         <Text style={{fontSize: 48 }}>DashBoardScreen</Text>
-        <Text style={{fontSize: 48 }}>DashBoardScreen</Text>
-        <Text style={{fontSize: 48 }}>DashBoardScreen</Text>
-        <Text style={{fontSize: 48 }}>DashBoardScreen</Text>
-        <Text style={{fontSize: 48 }}>DashBoardScreen</Text>
-        <Text style={{fontSize: 48 }}>DashBoardScreen</Text>
-        <Text style={{fontSize: 48 }}>DashBoardScreen</Text>
-        <Text style={{fontSize: 48 }}>DashBoardScreen</Text>
-        <Text style={{fontSize: 48 }}>DashBoardScreen</Text>
-        <Text style={{fontSize: 48 }}>DashBoardScreen</Text>
-        <Text style={{fontSize: 48 }}>DashBoardScreen</Text>
-        
-        <Text style={{fontSize: 48 }}>DashBoardScreen</Text>
-        <Text style={{fontSize: 48 }}>DashBoardScreen</Text>
-        
-        <Text style={{fontSize: 48 }}>DashBoardScreen</Text>
-        <Text style={{fontSize: 48 }}>DashBoardScreen</Text>
-        
-        <Text style={{fontSize: 48 }}>DashBoardScreen</Text>
-        <Text style={{fontSize: 48 }}>DashBoardScreen</Text>
-        
-        
-        
-
-        <Icon
-                name='infocirlce'
-                color="#4F8EF7"
-                size={30}
-            />
-
 
     </ScrollView>
 
